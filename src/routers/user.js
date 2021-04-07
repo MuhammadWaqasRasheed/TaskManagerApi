@@ -6,6 +6,11 @@ const multer = require('multer')
 const sharp = require('sharp')
 const { sendWelcomeEmail , sendCancelationEmail } = require('../emails/account')
 
+//Test Route
+router.get('/test',(req,res)=>{
+    res.send('Tesing Route.')
+})
+
 //signup
 router.post('/user',async (req,res)=>{
     const user = new User( req.body )
